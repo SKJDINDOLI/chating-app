@@ -54,7 +54,7 @@ $user_self=$_SESSION['username'];
               <h6 class="card-subtitle mb-2 text-muted">'.$rowp['loc'].'</h6>
               <img src="users/'.$row['add_user'].'/posts_pic/'.$rowp['pic_name'].'" class="card-img-top" alt="...">
               <p class="card-text">'.$rowp['description'].'</p>
-              <a href="welcome.php#like'.$count.'?like=true,user='.$row['add_user'].',post_no='.$rowp['sno'].'" class="card-link" id="like'.$count.'"><span class="material-symbols-outlined">favorite</span></a>
+              <a href="#like'.$count.'?like=true,user='.$row['add_user'].',post_no='.$rowp['sno'].'" class="card-link" id="like'.$count.'"><span class="material-symbols-outlined">favorite</span></a>
               <a href="#" class="card-link">Another link</a>
             </div>
           </div>';
