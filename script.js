@@ -67,9 +67,10 @@ window.addEventListener("load", (event) => {
 document.getElementById("loading").classList.remove("d-flex");
 document.getElementById("loading").classList.add("d-none");
 });
+// document.getElementById("message_id").addEventListener("submit",()=>{
+//   window.location=`#chat_div`;
+//   window.location=`#${message_id}`;
+// })
   setInterval( () =>{
-  // $(`#${message_id}`).load(window.location.href +  ` #${message_id}`);
-  // $(`#${message_id}`).load(window.location.href +  ` #chat_div`+ ` #${message_id}`);
-  window.location=`#chat_div`;
-  window.location=`#${message_id}`;
+    window.location=`test2.php?chat_user=${chat_user}#${message_id}`;
 }, 3000);  

@@ -56,36 +56,37 @@ echo '
               <h6 class="card-subtitle mb-2 text-muted"></h6>
               <hr>
               <iframe class="card-text overflow-scroll manu-v-height-70" id="chat_div" src="test2.php?chat_user='.$chat_user.'" frameborder="0"></iframe>';
-        
         $sqlm="SELECT * FROM `$chat_user.chat` WHERE (`_from`='$user_self' OR `_to`='$user_self') AND (`_from`='$chat_user' OR `_to`='$chat_user')";
         $resultm=mysqli_query($conn,$sqlm);
         $num_row=mysqli_num_rows($resultm);
         $message_id=1;
+        
         while($rowm=mysqli_fetch_assoc($resultm)){
-            
-          // if($rowm[$chat_user]!=null){
 
-          //   echo '<div class="d-flex justify-content-start">
-          //           <div class="alert text-white bg-primary rounded-4 rounded-start manu-max-width-75 " id="'.$rowm['sno'].'" role="alert">
-          //             '.$rowm[$chat_user].'
-          //           </div>
-          //         </div>';
-          // }
-          // if($rowm[$user_self]!=null){
-          //   echo '<div class="d-flex justify-content-end">
-          //           <div class="alert text-white bg-success rounded-4 rounded-end  manu-max-width-75" id="'.$rowm['sno'].'" role="alert">
-          //             '.$rowm[$user_self].'
-          //           </div>
-          //         </div>
-          //     ';
-          // }
+            
+        //   if($rowm[$chat_user]!=null){
+
+        //     echo '<div class="d-flex justify-content-start">
+        //             <div class="alert text-white bg-primary rounded-4 rounded-start manu-max-width-75 " id="'.$rowm['sno'].'" role="alert">
+        //               '.$rowm[$chat_user].'
+        //             </div>
+        //           </div>';
+        //   }
+        //   if($rowm[$user_self]!=null){
+        //     echo '<div class="d-flex justify-content-end">
+        //             <div class="alert text-white bg-success rounded-4 rounded-end  manu-max-width-75" id="'.$rowm['sno'].'" role="alert">
+        //               '.$rowm[$user_self].'
+        //             </div>
+        //           </div>
+        //       ';
+        //   }
           $message_id=$rowm['sno']+1;
         }
         echo '<input type="hidden" id="message_id" value="'.$message_id.'">';
         echo '
         </div>
         <div class="card-footer d-flex justify-content-start ">
-        <form class="d-flex" action="'.$_SERVER['PHP_SELF'].'#'.$message_id.'" method="get" id="message_form">
+        <form class="d-flex" action="test.php?chat_user='.$chat_user.'#'.$message_id.'" method="get" id="message_form">
         <input type="hidden" name="username" id="chat_user" value="'.$chat_user.'">
         <div class="">
             <input type="text" class="form-control border-info" id="text_message" name="text_message" placeholder="Message" aria-describedby="emailHelp">

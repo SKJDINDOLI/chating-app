@@ -20,7 +20,6 @@ $user_self=$_SESSION['username'];
 <body class="bg-dark text-primary">
     <?php
     include "nav.php";
-    
     ?>
     <main>
     <div class="w-100 h-100 bg-dark position-absolute z-3 d-flex justify-content-center align-items-center bg-opacity-75 top-0 start-0 " id="loading">
@@ -60,7 +59,7 @@ $user_self=$_SESSION['username'];
                         <label for="imageUpload"><span class="material-symbols-outlined">edit</span></label>
                     </div>
                     <div class="avatar-preview card-img-top border border-info"style="width: 18rem;">
-                        <div id="imagePreview" style="background-image: url(http://i.pravatar.cc/500?img=7);">
+                        <div id="imagePreview" style="background-image: url(img/post_image_icon.png);">
                         </div>
                     </div>
                 </div>
