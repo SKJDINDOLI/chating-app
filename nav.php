@@ -1,7 +1,7 @@
 <?php
 echo '<nav class="navbar navbar-expand-lg bg-body-primary bg-primary  sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand text-light" href="#">Navbar</a>
+    <a class="navbar-brand text-light" href="welcome.php"><img src="img/chating app-logos_transparent.png" style="height: 70px;" alt="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
